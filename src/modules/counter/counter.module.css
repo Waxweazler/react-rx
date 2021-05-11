@@ -1,0 +1,7 @@
+.container {
+    border: 4px solid #dcdcdc;
+    border-radius: 4px;
+    display: flex;
+    padding: 24px;
+    width: 50%;
+}
