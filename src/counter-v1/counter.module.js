@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
+import styles from '../counter/counter.module.css';
 import {CounterInput} from './input/counter.input.module';
 import {CounterOutput} from './output/counter.output.module';
-import {CounterElement} from './element/counter.element.module';
-import styles from './counter.module.css';
+import {CounterElement} from '../counter/element/counter.element.module';
 
-export const Counter = () => {
+export const CounterV1 = () => {
 
     const [counter, setCounter] = useState(0);
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './counter.output.module.css';
+import styles from '../../counter/output/counter.output.module.css';
 
 export const CounterOutput = ({value}) => {
 
