@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from '../../counter/output/counter.output.module.css';
 import {useCounterContext} from '../counter.provider';
+import {CounterOutput as CCounterOutput} from '../../counter/output/counter.output.module';
 
 export const CounterOutput = () => {
 
     const {value} = useCounterContext();
 
     return (
-        <span className={styles.output}>{value}</span>
+        <CCounterOutput value={value}/>
     );
 
 };

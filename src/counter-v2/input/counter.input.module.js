@@ -1,15 +1,13 @@
 import React from 'react';
 import {useCounterContext} from '../counter.provider';
+import {CounterInput as CCounterInput} from '../../counter/input/counter.input.module';
 
 export const CounterInput = () => {
 
     const {increment, decrement} = useCounterContext();
 
     return (
-        <>
-            <button type="button" onClick={increment}>+</button>
-            <button type="button" onClick={decrement}>-</button>
-        </>
+        <CCounterInput increment={increment} decrement={decrement}/>
     );
 
 };
