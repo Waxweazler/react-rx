@@ -1,5 +1,6 @@
 const ACTION_INCREMENT = 'INCREMENT';
 const ACTION_DECREMENT = 'DECREMENT';
+
 const INITIAL_STATE = {
     value: 0
 };
@@ -7,6 +8,10 @@ const INITIAL_STATE = {
 const handleChange = (state, change) => ({
     value: state.value + change
 });
+
+export const incrementCounter = () => ({type: ACTION_INCREMENT});
+export const decrementCounter = () => ({type: ACTION_DECREMENT});
+export const selectCounterValue = state => state.value;
 
 export const counterReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
@@ -18,9 +23,3 @@ export const counterReducer = (state = INITIAL_STATE, action) => {
             return state;
     }
 };
-
-export const incrementCounter = () => ({type: ACTION_INCREMENT});
-export const decrementCounter = () => ({type: ACTION_DECREMENT});
-export const selectCounterValue = (state) => state.value;
-
-

@@ -8,7 +8,7 @@ export const CounterInput = () => {
     const dispatch = useDispatch();
 
     const increment = () => dispatch(incrementCounter());
-    const decrement = () => dispatch(decrementCounter())
+    const decrement = () => dispatch(decrementCounter());
 
     return (
         <CCounterInput increment={increment} decrement={decrement}/>
