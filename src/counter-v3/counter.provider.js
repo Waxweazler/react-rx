@@ -1,5 +1,5 @@
 import {createStore} from 'redux';
-import {counterReducer} from './reducers/counter.reducer';
+import {counterReducer} from './redux/counter.reducer';
 import {Provider} from 'react-redux';
 import React from 'react';
 
