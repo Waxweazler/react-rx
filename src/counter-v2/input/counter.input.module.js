@@ -1,5 +1,5 @@
 import React from 'react';
-import {useCounterContext} from '../counter.context';
+import {useCounterContext} from '../counter.provider';
 
 export const CounterInput = () => {
 
@@ -7,8 +7,8 @@ export const CounterInput = () => {
 
     return (
         <>
-            <button type="button" onClick={increment}>Increment</button>
-            <button type="button" onClick={decrement}>Decrement</button>
+            <button type="button" onClick={increment}>+</button>
+            <button type="button" onClick={decrement}>-</button>
         </>
     );
 
