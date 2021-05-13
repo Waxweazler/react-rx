@@ -1,5 +1,6 @@
 import React from 'react';
 import {QueryClient, QueryClientProvider} from 'react-query';
+import {ReactQueryDevtools} from 'react-query/devtools';
 
 export const CounterProvider = props => {
 
@@ -8,6 +9,7 @@ export const CounterProvider = props => {
     return (
         <QueryClientProvider client={queryClient}>
             {props.children}
+            <ReactQueryDevtools initialIsOpen={false}/>
         </QueryClientProvider>
     );
 
