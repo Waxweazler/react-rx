@@ -1,9 +1,9 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
 import {decrementCounter, incrementCounter} from '../redux/counter.reducer';
-import {CounterInput} from '../../../modules/counter/input/counter.input.module';
+import {CounterActions} from '../../../modules/counter/actions/counter.actions.module';
 
-export const CounterInputV3 = () => {
+export const CounterInput = () => {
 
     const dispatch = useDispatch();
 
@@ -11,7 +11,7 @@ export const CounterInputV3 = () => {
     const decrement = () => dispatch(decrementCounter());
 
     return (
-        <CounterInput increment={increment} decrement={decrement}/>
+        <CounterActions increment={increment} decrement={decrement}/>
     );
 
 };

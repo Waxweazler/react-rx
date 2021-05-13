@@ -1,15 +1,13 @@
 import React from 'react';
-import styles from './example.module.scss'
+import {Card} from 'react-bootstrap';
 
-export const Example = props => {
-
-    const {description, children} = props;
+export const Example = ({description, children}) => {
 
     return (
-        <div className={styles.container}>
-            <h3 className={styles.description}>{description}</h3>
-            {children}
-        </div>
-    )
+        <Card>
+            <Card.Header>{description}</Card.Header>
+            <Card.Body>{children}</Card.Body>
+        </Card>
+    );
 
 }

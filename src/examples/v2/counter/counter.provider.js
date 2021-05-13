@@ -6,13 +6,8 @@ export const CounterProvider = (props) => {
 
     const [counter, setCounter] = useState(0);
 
-    const increment = () => {
-        setCounter(counter + 1);
-    };
-
-    const decrement = () => {
-        setCounter(counter - 1);
-    };
+    const increment = () => setCounter(counter + 1);
+    const decrement = () => setCounter(counter - 1);
 
     return (
         <CounterContext.Provider value={{value: counter, increment: increment, decrement: decrement}}>
@@ -22,6 +17,4 @@ export const CounterProvider = (props) => {
 
 };
 
-export const useCounterContext = () => {
-    return useContext(CounterContext);
-}
+export const useCounterContext = () => useContext(CounterContext);

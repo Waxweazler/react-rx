@@ -1,8 +1,8 @@
 import React from 'react';
-import {CounterInput} from '../../../modules/counter/input/counter.input.module';
 import {useCounter, useDecrementCounter, useIncrementCounter} from '../query/query.hooks';
+import {CounterActions} from '../../../modules/counter/actions/counter.actions.module';
 
-export const CounterInputV4 = () => {
+export const CounterInput = () => {
 
     const {isLoading, isFetching} = useCounter();
     const incrementMutation = useIncrementCounter();
@@ -12,7 +12,7 @@ export const CounterInputV4 = () => {
     const decrement = () => decrementMutation.mutate();
 
     return (
-        <CounterInput increment={increment} decrement={decrement} isLoading={isLoading || isFetching}/>
+        <CounterActions increment={increment} decrement={decrement} isLoading={isLoading || isFetching}/>
     );
 
 };

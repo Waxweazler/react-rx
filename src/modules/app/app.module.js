@@ -1,28 +1,29 @@
 import React from 'react';
-import {Example} from '../example/example.module';
-import {CounterV1} from '../../examples/counter-v1/counter.module';
-import {CounterV2} from '../../examples/counter-v2/counter.module';
-import {CounterV3} from '../../examples/counter-v3/counter.module';
-import {CounterV4} from '../../examples/counter-v4/counter.module';
-import styles from './app.module.scss';
+import {Col, Container, Row} from 'react-bootstrap';
+import {ExampleV1} from '../../examples/v1/example.module';
+import {ExampleV2} from '../../examples/v2/example.module';
+import {ExampleV3} from '../../examples/v3/example.module';
+import {ExampleV4} from '../../examples/v4/example.module';
 
 export const App = () => {
 
     return (
-        <div className={styles.container}>
-            <Example description="w/ delegation">
-                <CounterV1/>
-            </Example>
-            <Example description="w/ context">
-                <CounterV2/>
-            </Example>
-            <Example description="w/ redux">
-                <CounterV3/>
-            </Example>
-            <Example description="w/ query">
-                <CounterV4/>
-            </Example>
-        </div>
+        <Container>
+            <Row>
+                <Col xs="6">
+                    <ExampleV1/>
+                </Col>
+                <Col xs="6">
+                    <ExampleV2/>
+                </Col>
+                <Col xs="6">
+                    <ExampleV3/>
+                </Col>
+                <Col xs="6">
+                    <ExampleV4/>
+                </Col>
+            </Row>
+        </Container>
     );
 
 };

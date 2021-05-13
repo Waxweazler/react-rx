@@ -1,7 +1,7 @@
 import React from 'react';
-import {combineReducers, createStore} from 'redux';
 import {Provider} from 'react-redux';
-import {counterReducer} from './redux/counter.reducer';
+import {combineReducers, createStore} from 'redux';
+import {counterReducer} from '../redux/counter.reducer';
 
 export const CounterProvider = props => {
 
