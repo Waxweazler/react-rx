@@ -1,11 +1,10 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
-import {selectCounterValue} from '../redux/counter.reducer';
 import {CounterValue} from '../../../modules/counter/value/counter.value.module';
+import {useCounterValue} from '../redux/redux.hooks';
 
 export const CounterOutput = () => {
 
-    const value = useSelector(selectCounterValue);
+    const value = useCounterValue();
 
     return (
         <CounterValue value={value}/>

@@ -7,7 +7,9 @@ export const Example = ({description, children}) => {
     return (
         <div className={styles.container}>
             <Card>
-                <Card.Header>{description}</Card.Header>
+                <Card.Header>
+                    <span className="font-weight-bold">{description}</span>
+                </Card.Header>
                 <Card.Body>{children}</Card.Body>
             </Card>
         </div>
