@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Counter} from '../../../modules/counter/counter.module';
-import {CounterElement} from '../../../modules/counter/element/counter.element.module';
 import {CounterInput} from './counter.input.module';
 import {CounterOutput} from './counter.output.module';
 
@@ -13,12 +12,8 @@ export const CounterV1 = () => {
 
     return (
         <Counter>
-            <CounterElement>
-                <CounterInput increment={increment} decrement={decrement}/>
-            </CounterElement>
-            <CounterElement>
-                <CounterOutput value={counter}/>
-            </CounterElement>
+            <CounterOutput value={counter}/>
+            <CounterInput increment={increment} decrement={decrement}/>
         </Counter>
     );
 

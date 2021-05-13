@@ -3,7 +3,7 @@ const cors = require('cors');
 
 const server = express();
 const port = 5000;
-const delay = 1000;
+const delay = 500;
 const store = {
     counter: 0
 };
