@@ -1,0 +1,8 @@
+import React from 'react';
+import styles from './counter.output.module.scss';
+
+export const CounterOutput = ({value}) => {
+
+    return <span className={styles.output}>{value}</span>;
+
+};

@@ -3,16 +3,26 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "react": "^17.0.2",
+    "react-bootstrap": "^1.6.0",
     "react-dom": "^17.0.2",
+    "react-query": "^3.16.0",
     "react-redux": "^7.2.4",
     "redux": "^4.1.0"
   },
   "devDependencies": {
+    "concurrently": "^6.1.0",
+    "node-sass": "^6.0.0",
     "react-scripts": "^4.0.3"
   },
   "scripts": {
-    "start": "react-scripts start"
+    "run:client": "react-scripts start",
+    "run:server": "node server/index.js",
+    "start": "concurrently \"npm run run:server\" \"npm run run:client\""
   },
   "browserslist": {
     "production": [
