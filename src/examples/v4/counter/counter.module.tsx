@@ -4,15 +4,13 @@ import {CounterInput} from './counter.input.module';
 import {CounterOutput} from './counter.output.module';
 import {CounterProvider} from './counter.provider';
 
-export const CounterV3 = () => {
+export const CounterV4 = () => (
 
-    return (
-        <CounterProvider>
-            <Counter>
-                <CounterOutput/>
-                <CounterInput/>
-            </Counter>
-        </CounterProvider>
-    );
+    <CounterProvider>
+        <Counter>
+            <CounterOutput/>
+            <CounterInput/>
+        </Counter>
+    </CounterProvider>
 
-};
+);

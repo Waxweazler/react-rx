@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from 'react-redux';
-import {decrementCounter, incrementCounter, selectCounterValue} from './counter.reducer';
+import {counterValueSelector, decrementCounter, incrementCounter} from './redux.store';
 
-export const useCounterValue = () => useSelector(selectCounterValue);
+export const useCounterValue = () => useSelector(counterValueSelector);
 export const useCounterActions = () => {
     const dispatch = useDispatch();
     return {

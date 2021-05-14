@@ -1,11 +1,11 @@
-import axios from 'axios';
+import axios, {AxiosRequestConfig, AxiosResponse} from 'axios';
 
 const client = axios.create({
     baseURL: 'http://localhost:5000'
 });
 
-const request = options => {
-    const onSuccess = (response) => {
+const request = (options: AxiosRequestConfig) => {
+    const onSuccess = (response: AxiosResponse) => {
         console.debug('request successful!', response);
         return response.data;
     };

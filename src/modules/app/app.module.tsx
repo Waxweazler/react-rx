@@ -6,16 +6,14 @@ import {ExampleV4} from '../../examples/v4/example.module';
 import {ExampleV5} from '../../examples/v5/example.module';
 import styles from './app.module.scss';
 
-export const App = () => {
+export const App = () => (
 
-    return (
-        <div className={styles.container}>
-            <ExampleV1/>
-            <ExampleV2/>
-            <ExampleV3/>
-            <ExampleV4/>
-            <ExampleV5/>
-        </div>
-    );
+    <div className={styles.container}>
+        <ExampleV1/>
+        <ExampleV2/>
+        <ExampleV3/>
+        <ExampleV4/>
+        <ExampleV5/>
+    </div>
 
-};
+);

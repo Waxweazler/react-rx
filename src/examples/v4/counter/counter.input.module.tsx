@@ -8,7 +8,9 @@ export const CounterInput = () => {
     const {increment, decrement} = useCounterActions();
 
     return (
-        <CounterActions increment={increment} decrement={decrement} isLoading={isLoading || isFetching}/>
+        <CounterActions increment={() => increment.mutate(null)}
+                        decrement={() => decrement.mutate(null)}
+                        isLoading={isLoading || isFetching}/>
     );
 
 };

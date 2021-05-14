@@ -1,8 +1,7 @@
 import React, {createContext, useContext, useState} from 'react';
+import {ChildrenOnlyProps, CounterContextType} from '../../../types';
 
-const CounterContext = createContext(null);
-
-export const CounterProvider = (props) => {
+const CounterProvider = ({children}: ChildrenOnlyProps) => {
 
     const [counter, setCounter] = useState(0);
 
@@ -11,10 +10,13 @@ export const CounterProvider = (props) => {
 
     return (
         <CounterContext.Provider value={{value: counter, increment: increment, decrement: decrement}}>
-            {props.children}
+            {children}
         </CounterContext.Provider>
     );
 
 };
 
-export const useCounterContext = () => useContext(CounterContext);
+const CounterContext = createContext({} as CounterContextType);
+const useCounterContext = () => useContext(CounterContext);
+
+export {CounterProvider, useCounterContext};

@@ -1,14 +1,15 @@
 import React from 'react';
 import {QueryClient, QueryClientProvider} from 'react-query';
 import {ReactQueryDevtools} from 'react-query/devtools';
+import {ChildrenOnlyProps} from '../../../types';
 
-export const CounterProvider = props => {
+export const CounterProvider = ({children}: ChildrenOnlyProps) => {
 
     const queryClient = new QueryClient();
 
     return (
         <QueryClientProvider client={queryClient}>
-            {props.children}
+            {children}
             <ReactQueryDevtools initialIsOpen={false}/>
         </QueryClientProvider>
     );

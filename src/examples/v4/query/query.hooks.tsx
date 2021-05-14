@@ -1,7 +1,7 @@
-import {useMutation, useQuery, useQueryClient} from 'react-query';
+import {MutationFunction, useMutation, useQuery, useQueryClient} from 'react-query';
 import {CounterAPI} from './query.api';
 
-const useInvalidationMutation = mutation => {
+const useInvalidationMutation = (mutation: MutationFunction) => {
     const queryClient = useQueryClient();
     return useMutation(mutation, {
         onSuccess: () => queryClient.invalidateQueries('fetchCounter')
@@ -10,6 +10,6 @@ const useInvalidationMutation = mutation => {
 
 export const useCounterValue = () => useQuery('fetchCounter', CounterAPI.fetch);
 export const useCounterActions = () => ({
-    increment: useInvalidationMutation(CounterAPI.increment).mutate,
-    decrement: useInvalidationMutation(CounterAPI.decrement).mutate
+    increment: useInvalidationMutation(CounterAPI.increment),
+    decrement: useInvalidationMutation(CounterAPI.decrement)
 });
