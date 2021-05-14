@@ -1,4 +1,3 @@
-import React from 'react';
 import {Example} from '../../modules/example/example.module';
 import {CounterV3} from './counter/counter.module';
 

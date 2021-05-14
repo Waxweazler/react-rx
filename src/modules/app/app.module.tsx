@@ -1,4 +1,3 @@
-import React from 'react';
 import {ExampleV1} from '../../examples/v1/example.module';
 import {ExampleV2} from '../../examples/v2/example.module';
 import {ExampleV3} from '../../examples/v3/example.module';

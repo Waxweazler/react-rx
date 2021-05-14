@@ -27,4 +27,9 @@ const {increment, decrement} = counterSlice.actions;
 
 const counterValueSelector = ({counter}: ReduxStore) => counter.value;
 
-export {createStore, counterValueSelector, increment as incrementCounter, decrement as decrementCounter};
+export {
+    createStore,
+    counterValueSelector,
+    increment as incrementCounter,
+    decrement as decrementCounter
+};

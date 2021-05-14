@@ -1,4 +1,3 @@
-import React from 'react';
 import {Card} from 'react-bootstrap';
 import styles from './example.module.scss';
 import {ExampleProps} from '../../types';

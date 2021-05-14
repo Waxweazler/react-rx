@@ -1,4 +1,3 @@
-import React from 'react';
 import {CounterActions} from '../../../modules/counter/actions/counter.actions.module';
 import {CounterInputProps} from '../../../types';
 

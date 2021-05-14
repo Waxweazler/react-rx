@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './counter.value.module.scss';
 import {CounterValueProps} from '../../../types';
 

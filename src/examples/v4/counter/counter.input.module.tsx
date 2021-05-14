@@ -1,4 +1,3 @@
-import React from 'react';
 import {useCounterActions, useCounterValue} from '../query/query.hooks';
 import {CounterActions} from '../../../modules/counter/actions/counter.actions.module';
 

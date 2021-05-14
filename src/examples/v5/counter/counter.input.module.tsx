@@ -1,4 +1,3 @@
-import React from 'react';
 import {CounterActions} from '../../../modules/counter/actions/counter.actions.module';
 import {useCounterActions, useCounterValue} from '../swr/swr.hooks';
 
