@@ -6,7 +6,7 @@ export const CounterOutput = () => {
     const {data, isLoading, isFetching} = useCounterValue();
 
     return (
-        <CounterValue value={(isLoading || isFetching) ? '...' : data.value}/>
+        <CounterValue value={(isLoading || isFetching) ? '···' : data.value}/>
     );
 
 };
